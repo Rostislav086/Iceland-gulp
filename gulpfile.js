@@ -34,6 +34,7 @@ let sass = require('gulp-sass');
 let cleancss = require('gulp-clean-css');
 let autoprefixer = require('gulp-autoprefixer');
 let rename = require("gulp-rename");
+let uglify = require('gulp-uglify-es').default;
 
 // Определяем логику работы Browsersync
 	function browserSync() {
@@ -53,14 +54,26 @@ let rename = require("gulp-rename");
 		.pipe(browsersync.stream()) // Сделаем инъекцию в браузер
 	}
 
+	function js() {
+		return src(path.src.js) //Берём файлы из источников
+		.pipe(dest(path.build.js)) //Выгружаем готовый файл в пункт назначения
+		.pipe(uglify())
+		.pipe(rename({
+			extname: ".min.js"
+		}))
+		.pipe(dest(path.build.js)) //Выгружаем готовый файл в пункт назначения
+		.pipe(browsersync.stream()) // Сделаем инъекцию в браузер
+	}
+
 // Определяем логику отслеживания файлов
 	function watchFiles() {
 		gulp.watch([path.watch.html], html) // Мониторим файлы HTML на изменения
-		gulp.watch([path.watch.scss], sassStart) // Мониторим файлы HTML на изменения
+		gulp.watch([path.watch.scss], sassStart) // Мониторим файлы SCSS на зменения
+		gulp.watch([path.watch.js], js) // Мониторим файлы JS на изменения
 	}
 
 // Определяем логику Очистки dist/
-	function clean(parms) {
+	function clean() {
 		return del(path.clean) // Удаляем всё содержимое папки "dist/"
 	}
 
@@ -92,10 +105,11 @@ let rename = require("gulp-rename");
 		// .pipe(browsersync.stream()) // Сделаем инъекцию в браузер
 	}
 
-let build = gulp.series(clean, gulp.parallel(sassStart, html, img, fonts));
+let build = gulp.series(clean, gulp.parallel(sassStart, html, js, img, fonts));
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.sassStart = sassStart;
+exports.js = js;
 exports.html = html;
 exports.build = build;
 exports.watch = watch;
