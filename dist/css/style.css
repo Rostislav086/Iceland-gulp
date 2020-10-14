@@ -20,10 +20,9 @@
   font-style: normal; }
 
 .header {
-  height: 100vh; }
+  height: 90vh; }
   .header-wrapper {
-    background: url("../img/header_back.png") center no-repeat;
-    background-size: cover;
+    position: relative;
     height: 100%; }
   .header-container {
     padding: 50px 0px 0px 0px; }
@@ -38,8 +37,10 @@
         -ms-flex-align: center;
             align-items: center; }
   .header-next {
-    text-align: center;
-    color: white; }
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    color: #FFFFFF; }
 
 .nav-link {
   display: inline-block;
@@ -96,7 +97,24 @@
   color: #FFFFFF;
   border: 1px solid white; }
 
+.slide-img {
+  width: 100%; }
+
 .container {
   margin: auto;
   max-width: 1030px;
   width: 98%; }
+
+.logo-link__black {
+  margin: 0px 150px 0px 150px;
+  padding: 5px 13px 5px 13px;
+  display: inline-block;
+  font-family: 'Source Serif Pro';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: black;
+  border: 1px solid black; }

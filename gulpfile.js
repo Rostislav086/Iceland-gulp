@@ -12,14 +12,16 @@ let path = {
 	src:{ // Исходные файлы лежат тут
 		html: [sourse_folder+"/*.html", "!" + sourse_folder+"/_*.html"],
 		scss: sourse_folder + "/scss/style.scss",
-		js: sourse_folder + "/script/mine.js",
+		css: sourse_folder + "/css/*.css",
+		js: sourse_folder + "/script/*.js",
 		img: sourse_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
 		fonts: sourse_folder + "/fonts/**/*.{eot,ttf,otf,svg,woff}",
 	},
 	watch:{ // Наблюдать будем по этому пути
 		html: sourse_folder+"/**/*.html",
 		scss: sourse_folder + "/scss/**/*.scss",
-		js: sourse_folder + "/script//**/*.js",
+		css: sourse_folder + "/css/*.css",
+		js: sourse_folder + "/script/**/*.js",
 		img: sourse_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
 	},
 	clean: "./" + project_folder + "/"
@@ -54,6 +56,16 @@ let uglify = require('gulp-uglify-es').default;
 		.pipe(browsersync.stream()) // Сделаем инъекцию в браузер
 	}
 
+	function css() {
+		return src(path.src.css) //Берём файлы из источников
+		.pipe(dest(path.build.css)) //Выгружаем готовый файл в пункт назначения
+		.pipe(rename({
+			extname: ".min.css"
+		}))
+		.pipe(dest(path.build.css)) //Выгружаем готовый файл в пункт назначения
+		.pipe(browsersync.stream()) // Сделаем инъекцию в браузер
+	}
+
 	function js() {
 		return src(path.src.js) //Берём файлы из источников
 		.pipe(dest(path.build.js)) //Выгружаем готовый файл в пункт назначения
@@ -70,6 +82,7 @@ let uglify = require('gulp-uglify-es').default;
 		gulp.watch([path.watch.html], html) // Мониторим файлы HTML на изменения
 		gulp.watch([path.watch.scss], sassStart) // Мониторим файлы SCSS на зменения
 		gulp.watch([path.watch.js], js) // Мониторим файлы JS на изменения
+		gulp.watch([path.watch.css], css) // Мониторим файлы JS на изменения
 	}
 
 // Определяем логику Очистки dist/
@@ -105,11 +118,12 @@ let uglify = require('gulp-uglify-es').default;
 		// .pipe(browsersync.stream()) // Сделаем инъекцию в браузер
 	}
 
-let build = gulp.series(clean, gulp.parallel(sassStart, html, js, img, fonts));
+let build = gulp.series(clean, gulp.parallel(sassStart, html, js, css, img, fonts));
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.sassStart = sassStart;
 exports.js = js;
+exports.css = css;
 exports.html = html;
 exports.build = build;
 exports.watch = watch;
