@@ -82,7 +82,8 @@ let uglify = require('gulp-uglify-es').default;
 		gulp.watch([path.watch.html], html) // Мониторим файлы HTML на изменения
 		gulp.watch([path.watch.scss], sassStart) // Мониторим файлы SCSS на зменения
 		gulp.watch([path.watch.js], js) // Мониторим файлы JS на изменения
-		gulp.watch([path.watch.css], css) // Мониторим файлы JS на изменения
+		gulp.watch([path.watch.css], css) // Мониторим файлы css на изменения
+		gulp.watch([path.watch.img], img) // Мониторим файлы css на изменения
 	}
 
 // Определяем логику Очистки dist/
@@ -118,7 +119,7 @@ let uglify = require('gulp-uglify-es').default;
 		// .pipe(browsersync.stream()) // Сделаем инъекцию в браузер
 	}
 
-let build = gulp.series(clean, gulp.parallel(sassStart, html, js, css, img, fonts));
+let build = gulp.series(clean, gulp.parallel(sassStart, js, css, img, fonts,html));
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.sassStart = sassStart;

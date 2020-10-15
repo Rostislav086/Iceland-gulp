@@ -1,0 +1,82 @@
+.main {
+	&-wrapper{
+
+	}
+	&-container {
+		padding: 90px 0px 0px 0px;
+		text-align: center;
+	}
+}
+
+.iceland {
+	padding: 0px 0px 110px 0px;
+	&-content {
+		margin: 70px 0px 0px 0px;
+		display: flex;
+		justify-content: space-between;
+		&__about {
+			flex-basis: 40%;
+			text-align: left;
+			font-family: 'Source Serif Pro';
+			font-style: normal;
+			font-weight: normal;
+			font-size: 14px;
+			line-height: 24px;
+			/* or 171% */
+			letter-spacing: 0.01em;
+			color: #222222;
+		}
+	}
+
+}
+
+.we {
+	display: flex;
+	justify-content: center;
+	&-wrapper {
+		width: 1240px;
+		background: linear-gradient(rgba(61, 57, 57, 0.4)), url('../img/why.png') no-repeat;
+	}
+	&-container {
+		padding: 90px 0px 135px 0px;
+	}
+	&-title.section__title{
+		color: #FFFFFF;
+	}
+	&-content {
+		margin: 80px 0px 0px 0px;
+		display: flex;
+		justify-content: space-around;
+		&__item {
+			flex-basis: 20%;
+		}
+	}
+}
+
+.content{
+	&-item{
+		&__title {
+			text-align: left;
+			font-family: 'Source Serif Pro';
+			font-style: normal;
+			font-weight: 300;
+			font-size: 22px;
+			line-height: 30px;
+			/* or 136% */
+			letter-spacing: 0.02em;
+			color: #FFFFFF;
+		}
+		&__description {
+			margin: 20px 0px 0px 0px;
+			text-align: left;
+			font-family: 'Source Serif Pro';
+			font-style: normal;
+			font-weight: 100;
+			font-size: 14px;
+			line-height: 18px;
+			/* or 150% */
+			letter-spacing: 0.01em;
+			color: #FFFFFF;
+		}
+	}
+}
