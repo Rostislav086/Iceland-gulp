@@ -22,3 +22,21 @@ var mySwiper = new Swiper('.swiper-container', {
   });
 
   routeSwiper.init();
+
+
+
+
+  const contentAccordion = document.querySelectorAll('.content-accordion');
+  const contentAccordionBlock = document.querySelectorAll('.content-accordion__block');
+
+  for (let i = 0; i < contentAccordion.length; i++) {
+	contentAccordion[i].addEventListener("click", function () {
+		let block = this.nextElementSibling;
+
+		if (block.style.maxHeight === block.scrollHeight + "px") {
+            block.style.maxHeight = 0;
+        } else {
+            block.style.maxHeight = block.scrollHeight + "px";
+        }
+	});
+  };

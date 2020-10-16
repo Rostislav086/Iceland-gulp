@@ -6,15 +6,15 @@
 
 @font-face {
   font-family: 'BebasNeue';
-  src: url("fonts/BebasNeue Light.eot");
-  src: local("☺"), url("fonts/BebasNeue Light.woff") format("woff"), url("fonts/BebasNeue Light.ttf") format("truetype"), url("fonts/BebasNeue Light.svg") format("svg");
+  src: url("../fonts/bebasneue/BebasNeue Light.eot");
+  src: local("☺"), url("../fonts/bebasneue/BebasNeue Light.woff") format("woff"), url("../fonts/bebasneue/BebasNeue Light.ttf") format("truetype"), url("../fonts/bebasneue/BebasNeue Light.svg") format("svg");
   font-weight: 300;
   font-style: normal; }
 
 @font-face {
   font-family: 'BebasNeue Thin';
-  src: url("fonts/BebasNeue Thin.eot");
-  src: local("☺"), url("fonts/BebasNeue Thin.woff") format("woff"), url("fonts/BebasNeue Thin.ttf") format("truetype"), url("fonts/BebasNeue Thin.svg") format("svg");
+  src: url("../fonts/bebasneue/BebasNeue Thin.eot");
+  src: local("☺"), url("../fonts/bebasneue/BebasNeue Thin.woff") format("woff"), url("../fonts/bebasneue/BebasNeue Thin.ttf") format("truetype"), url("../fonts/bebasneue/BebasNeue Thin.svg") format("svg");
   font-weight: 100;
   font-style: normal; }
 
@@ -60,7 +60,7 @@
   text-align: center; }
   .header-content__titlte {
     margin: 0px 0px 30px 0px;
-    font-family: 'Bebas Neue';
+    font-family: 'BebasNeue';
     font-style: normal;
     font-weight: 300;
     font-size: 110px;
@@ -257,51 +257,78 @@
   letter-spacing: 0.01em;
   color: #222222; }
 
-.price-container {
-  margin: auto; }
-
-.price-back {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1))), url("../img/price-bac.png") center no-repeat;
-  background: -o-linear-gradient(rgba(0, 0, 0, 0.1)), url("../img/price-bac.png") center no-repeat;
-  background: linear-gradient(rgba(0, 0, 0, 0.1)), url("../img/price-bac.png") center no-repeat; }
-
-.price-title {
-  padding: 30px 0px 0px 0px;
-  font-family: 'BebasNeue Thin';
-  font-style: normal;
-  font-weight: normal;
-  font-size: 34px;
-  line-height: 34px;
-  text-align: center;
-  letter-spacing: 0.12em;
-  color: #FFFFFF; }
-
-.price-subtitle {
-  margin: 10px 0px 0px 0px;
-  font-family: 'Source Serif Pro';
-  font-style: normal;
-  font-weight: 300;
-  font-size: 22px;
-  line-height: 32px;
-  /* identical to box height, or 145% */
-  text-align: center;
-  letter-spacing: 0.02em;
-  color: #FFFFFF; }
-
-.price-button {
-  display: inline-block;
-  margin: 50px 0px 0px 0px;
-  width: 241px;
-  height: 62px;
-  background: #1148C0;
-  font-family: 'Bebas Neue';
-  font-style: normal;
-  font-weight: 100;
-  font-size: 18px;
-  line-height: 24px;
-  /* or 133% */
-  letter-spacing: 0.18em;
-  color: #FFFFFF; }
+.price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .price-wrapper {
+    max-width: 1400px;
+    width: 99%; }
+  .price-container {
+    margin: auto; }
+  .price-back {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1))), url("../img/price-bac.png") center no-repeat;
+    background: -o-linear-gradient(rgba(0, 0, 0, 0.1)), url("../img/price-bac.png") center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.1)), url("../img/price-bac.png") center no-repeat; }
+  .price-title {
+    padding: 30px 0px 0px 0px;
+    font-family: 'BebasNeue Thin';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 34px;
+    line-height: 34px;
+    text-align: center;
+    letter-spacing: 0.12em;
+    color: #FFFFFF; }
+  .price-subtitle {
+    margin: 10px 0px 0px 0px;
+    font-family: 'Source Serif Pro';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 32px;
+    /* identical to box height, or 145% */
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #FFFFFF; }
+  .price-button {
+    display: inline-block;
+    margin: 50px 0px 50px 0px;
+    width: 241px;
+    height: 62px;
+    background: #1148C0;
+    font-family: 'BebasNeue';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 18px;
+    line-height: 62px;
+    /* or 133% */
+    letter-spacing: 0.18em;
+    color: #FFFFFF;
+    text-decoration: none; }
+  .price .content-accordion {
+    padding: 30px 0px 30px 0px;
+    font-family: 'BebasNeue';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 26px;
+    /* identical to box height */
+    text-align: center;
+    letter-spacing: 0.12em;
+    color: #222222;
+    cursor: pointer;
+    text-align: left; }
+    .price .content-accordion__block {
+      padding: 15px 0px 0px 0px;
+      max-height: 0;
+      overflow: hidden;
+      -webkit-transition: max-height 0.2s ease-out;
+      -o-transition: max-height 0.2s ease-out;
+      transition: max-height 0.2s ease-out; }
 
 .section__title {
   margin: 30px 0px 0px 0px;

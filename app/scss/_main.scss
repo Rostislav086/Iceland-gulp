@@ -198,8 +198,11 @@
 }
 
 .price {
-
+	display: flex;
+	justify-content: center;
 	&-wrapper {
+		max-width: 1400px;
+		width: 99%;
 		// background: linear-gradient(rgba(0, 0, 0, 0.1)), url('../img/price-bac.png') center no-repeat;
 	}
 
@@ -238,18 +241,45 @@
 
 	&-button {
 		display: inline-block;
-		margin: 50px 0px 0px 0px;
+		margin: 50px 0px 50px 0px;
 		width: 241px;
 		height: 62px;
 		background: #1148C0;
-		font-family: 'Bebas Neue';
+		font-family: 'BebasNeue';
 		font-style: normal;
 		font-weight: 100;
 		font-size: 18px;
-		line-height: 24px;
+		line-height: 62px;
 		/* or 133% */
 		letter-spacing: 0.18em;
 		color: #FFFFFF;
+		text-decoration: none;
+	}
+
+	.content-accordion {
+		padding: 30px 0px 30px 0px;
+		// padding-left: 20%;
+		font-family: 'BebasNeue';
+		font-style: normal;
+		font-weight: 300;
+		font-size: 22px;
+		line-height: 26px;
+		/* identical to box height */
+		text-align: center;
+		letter-spacing: 0.12em;
+		color: #222222;
+		cursor: pointer;
+		text-align: left;
+
+		&__block {
+			padding: 15px 0px 0px 0px;
+			max-height: 0;
+			overflow: hidden;
+			transition: max-height 0.2s ease-out;
+		}
+		
+		&__text {
+		}
 	}
 }
 
