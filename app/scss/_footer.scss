@@ -1,0 +1,105 @@
+.footer {
+	&-wrapper {
+		margin: auto;
+		max-width: 1300px;
+		width: 99%;
+	}
+
+	&-container {
+		padding: 90px 0px 0px 0px;
+		text-align: center;
+	}
+
+	&-title {
+	}
+
+	&-number {
+		margin: 55px 0px 0px 0px;
+		ont-family: 'Source Serif Pro';
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 24px;
+		/* or 171% */
+		letter-spacing: 0.01em;
+		color: #222222;
+	}
+
+	&-email {
+		margin: 23px 0px 0px 0px;
+		font-family: 'Source Serif Pro';
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 24px;
+		/* identical to box height, or 171% */
+		letter-spacing: 0.01em;
+		color: #222222;
+
+	}
+
+	&-adress {
+		margin: 20px 0px 0px 0px;
+		font-family: 'Source Serif Pro';
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 24px;
+		/* or 171% */
+		text-align: center;
+		letter-spacing: 0.01em;
+		color: #222222;
+	}
+
+	&-time {
+		margin: 10px 0px 0px 0px;
+		font-family: 'Source Serif Pro';
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 24px;
+		/* or 171% */
+		text-align: center;
+		letter-spacing: 0.01em;
+		color: #222222;
+	}
+
+	&-social {
+		margin: auto;
+		margin-top: 45px;
+		width: 50px;
+		display: flex;
+		justify-content: center;
+
+		&__facebook {
+			margin: 0px 25px 0px 0px;
+
+		}
+		.fa-facebook {
+			font-size: 33px;
+			color: #1976D2;
+		}
+
+		&__telegram {
+			margin: 0px 25px 0px 0px;
+		}
+		.fa-telegram {
+			font-size: 33px;
+			color: #039BE5;;
+		}
+
+		.fa-vk{
+			font-size: 33px;
+			color: #1976D2;
+		}
+	}
+
+	&-img {
+		margin: 50px 0px 0px 0px;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		&__item {
+		}
+	}
+}

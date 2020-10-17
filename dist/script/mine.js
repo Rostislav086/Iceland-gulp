@@ -34,9 +34,15 @@ var mySwiper = new Swiper('.swiper-container', {
 		let block = this.nextElementSibling;
 
 		if (block.style.maxHeight === block.scrollHeight + "px") {
-            block.style.maxHeight = 0;
+			block.style.maxHeight = 0;
+			this.classList.remove('avtive-accordion');
+			this.style.textAlign = 'left';
+			this.style.fontWeight = 'normal';
         } else {
-            block.style.maxHeight = block.scrollHeight + "px";
+			block.style.maxHeight = block.scrollHeight + "px";
+			this.classList.add('avtive-accordion');
+			this.style.textAlign = 'center';
+			this.style.fontWeight = 'bold';
         }
 	});
   };
