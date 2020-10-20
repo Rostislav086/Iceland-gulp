@@ -1,3 +1,5 @@
+@import '_animation';
+
 .main {
 	&-wrapper{
 
@@ -320,6 +322,9 @@
 
 		&-text {
 
+			&__list {
+				margin: 0px 0px 15px 0px;
+			}
 			&__item {
 				width: 60%;
 				padding: 0px 0px 0px 15px;

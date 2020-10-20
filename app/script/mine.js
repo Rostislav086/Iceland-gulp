@@ -1,3 +1,5 @@
+new WOW().init();
+
 var mySwiper = new Swiper('.swiper-container', {
 	// Optional parameters
 	loop: true,
