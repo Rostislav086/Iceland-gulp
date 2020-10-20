@@ -509,6 +509,108 @@
       background-color: #222222;
       border-radius: 50%; }
 
+.residence-wrapper {
+  margin: auto;
+  max-width: 1300px;
+  width: 98%;
+  background: #FAFAFA; }
+
+.residence-container {
+  padding: 90px 0px 150px 0px; }
+
+.residence-content {
+  margin: 65px 0px 0px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+  .residence-content__video {
+    -ms-flex-preferred-size: 65%;
+        flex-basis: 65%; }
+  .residence-content__description {
+    -ms-flex-preferred-size: 35%;
+        flex-basis: 35%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .residence-content__text {
+    width: 65%;
+    text-align: left;
+    font-family: 'Source Serif Pro';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    /* or 150% */
+    letter-spacing: 0.01em;
+    color: #222222; }
+
+.book-wrapper {
+  margin: auto;
+  max-width: 1400px;
+  width: 99%;
+  background: url("../img/book_bcg.png"); }
+
+.book-container {
+  padding: 90px 0px 82px 0px; }
+
+.book-title {
+  color: #FFFFFF; }
+
+.book-content {
+  margin: 95px 0px 0px 0px; }
+
+.book-form {
+  display: block;
+  max-width: 540px;
+  width: 99%; }
+  .book-form__subtitle {
+    max-width: 542px;
+    width: 99%;
+    margin: 190px 0px 50px 0px;
+    font-family: 'Source Serif Pro';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 30px;
+    /* or 136% */
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #FFFFFF; }
+  .book-form__input {
+    max-width: 500px;
+    width: 99%;
+    height: 60px;
+    margin: 0px 0px 20px 0px;
+    padding: 0px 20px 0px 20px;
+    font-family: 'BebasNeue';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    letter-spacing: 0.18em;
+    color: #766F6F; }
+  .book-form__button {
+    width: 241px;
+    height: 60px;
+    left: 581px;
+    top: 1007px;
+    background: #1148C0;
+    border: 1px solid #1148C0;
+    font-family: 'BebasNeue';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #FFFFFF; }
+
 .footer-wrapper {
   margin: auto;
   max-width: 1300px;
@@ -599,7 +701,7 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
 
-.section__title {
+.residence-title, .section__title {
   margin: 30px 0px 0px 0px;
   font-family: 'BebasNeue Thin';
   font-style: normal;

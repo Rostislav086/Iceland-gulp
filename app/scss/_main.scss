@@ -351,6 +351,127 @@
 	}
 }
 
+.residence {
 
+	&-wrapper {
+		margin: auto;
+		max-width: 1300px;
+		width: 98%;
+		background: #FAFAFA;
+	}
 
+	&-container {
+		padding: 90px 0px 150px 0px;
+
+	}
+
+	&-title {
+		@extend %section__title;
+	}
+
+	&-content {
+		margin: 65px 0px 0px 0px;
+		display: flex;
+		justify-content: space-around;
+
+		&__video {
+			flex-basis: 65%;
+		}
+
+		&__description {
+			flex-basis: 35%;
+			display: flex;
+			align-items: center;
+		}
+
+		&__text {
+			width: 65%;
+			text-align: left;
+			font-family: 'Source Serif Pro';
+			font-style: normal;
+			font-weight: normal;
+			font-size: 14px;
+			line-height: 21px;
+			/* or 150% */
+			letter-spacing: 0.01em;
+			color: #222222;
+		}
+	}
+}
+
+.book {
+
+	&-wrapper {
+		margin: auto;
+		max-width: 1400px;
+		width: 99%;
+		background: url("../img/book_bcg.png");
+	}
+
+	&-container {
+		padding: 90px 0px 82px 0px;
+	}
+
+	&-title {
+		color: #FFFFFF;
+	}
+
+	&-content {
+		margin: 95px 0px 0px 0px;
+	}
+
+	&-form {
+		display: block;
+		max-width: 540px;
+		width: 99%;
+
+		&__subtitle {
+			max-width: 542px;
+			width: 99%;
+			margin: 190px 0px 50px 0px;
+			font-family: 'Source Serif Pro';
+			font-style: normal;
+			font-weight: normal;
+			font-size: 22px;
+			line-height: 30px;
+			/* or 136% */
+			text-align: center;
+			letter-spacing: 0.02em;
+			color: #FFFFFF;
+		}
+
+		&__input {
+			max-width: 500px;
+			width: 99%;
+			height: 60px;
+			margin: 0px 0px 20px 0px;
+			padding: 0px 20px 0px 20px;
+			font-family: 'BebasNeue';
+			font-style: normal;
+			font-weight: normal;
+			font-size: 14px;
+			line-height: 17px;
+			/* identical to box height */
+			letter-spacing: 0.18em;
+			color: #766F6F;
+		}
+
+		&__button {
+			width: 241px;
+			height: 60px;
+			left: 581px;
+			top: 1007px;
+			background: #1148C0;
+			border: 1px solid #1148C0;
+			font-family: 'BebasNeue';
+			font-style: normal;
+			font-weight: normal;
+			font-size: 18px;
+			line-height: 22px;
+			letter-spacing: 0.18em;
+			text-transform: uppercase;
+			color: #FFFFFF;
+		}
+	}
+}
 
