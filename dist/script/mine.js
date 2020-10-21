@@ -48,3 +48,10 @@ var mySwiper = new Swiper('.swiper-container', {
         }
 	});
   };
+
+  const bookFormButton = document.querySelector('.book-form__button');
+
+  bookFormButton.addEventListener('click', function (event) {
+	  event.preventDefault();
+	  alert("тут может быть любая информация");
+  });

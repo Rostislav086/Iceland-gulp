@@ -1,0 +1,241 @@
+@media (max-width: 375px) {
+	.container {
+		max-width: 375px;
+		width: 99%;
+	}
+
+
+	.header {
+		&-wrapper {
+			background: linear-gradient(rgba(0, 0, 0, 0.5)), url("../img/header_back.png") center;
+		}
+
+		&-nav {
+			display: none;
+		}
+
+		&-content {
+
+			&__titlte {
+				font-family: 'BebasNeue';
+				font-style: normal;
+				font-weight: 300;
+				font-size: 58px;
+				line-height: 58px;
+				/* identical to box height */
+				text-align: center;
+				letter-spacing: 0.335em;
+				text-transform: uppercase;
+				color: #FFFFFF;
+			}
+
+			&__description {
+				font-family: 'BebasNeue';
+				font-style: normal;
+				font-weight: 300;
+				font-size: 18px;
+				line-height: 18px;
+				/* identical to box height */
+				text-align: center;
+				letter-spacing: 0.32em;
+				text-transform: uppercase;
+				color: #FFFFFF;
+			}
+		}
+
+		.swiper-container {
+			display: none;
+		  }
+	}
+
+	.main-container {
+		padding: 20px 0px 0px 0px;
+	}
+
+	.iceland {
+
+		&-container{
+			padding: 0px 0px 0px 0px;
+			
+			.logo-link__black {
+				margin: auto;
+			}
+
+		}
+
+		&-title {
+		}
+
+		&-content {
+			width: 307px;
+			padding: 50px 0px 30px 0px;
+			margin: auto;
+			flex-direction: column;
+
+			&__about {
+				margin: 30px 0px 0px 0px;
+				height: 212px;
+				overflow: hidden;
+				order: 1;
+				font-family: 'Source Serif Pro';
+				font-style: normal;
+				font-weight: normal;
+				font-size: 14px;
+				line-height: 24px;
+				/* or 171% */
+				letter-spacing: 0.01em;
+				color: #222222;
+			}
+
+			&__img {
+				order: 0;
+			}
+		}
+
+		&-img {
+			width: 307px;
+			height: 332px;
+		}
+	}
+
+	.we {
+
+		&-wrapper {
+			background-size: cover;
+		}
+
+		&-container {
+			padding: 20px 0px 0px 0px;
+		}
+
+		&-title {
+			margin: 30px 0px 20px 0px;
+		}
+
+		&-content {
+			width: 283px;
+			margin: auto;
+			flex-direction: column;
+
+			&__item {
+				margin: 0px 0px 20px 0px;
+			}
+		}
+
+	.content {
+		&-item {
+			&__title {
+				font-family: 'Source Serif Pro';
+				font-style: normal;
+				font-weight: 100;
+				font-size: 20px;
+				line-height: 32px;
+				/* or 160% */
+				text-align: center;
+				letter-spacing: 0.02em;
+				color: #FFFFFF;
+			}
+
+			&__description {
+				font-family: 'Source Serif Pro';
+				font-style: normal;
+				font-weight: normal;
+				font-size: 14px;
+				line-height: 24px;
+				/* or 171% */
+				text-align: justify;
+				letter-spacing: 0.03em;
+				color: #FFFFFF;
+			}
+		}
+	}
+	}
+
+	.route {
+		.logo-link__black{
+			margin: auto;
+		}
+
+		&-content {
+			.route {
+				&-media {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+				}
+		
+				&-item {
+					width: 275px;
+					flex-direction: column;
+		
+					&__img {
+						display: none;
+						order: 1;
+						width: 285px;
+						height: 30px;
+					}
+		
+					&__description {
+						order: 0;
+					}
+					.img1 {
+						width: 28px;
+						height: 30px;
+						background-size: cover;
+					}
+				}
+			}
+
+			.description {
+		
+				&-subtitle {
+					text-align: center;
+				}
+		
+				&-about {
+					margin: 20px 0px 0px 0px;
+					text-align: justify;
+				}
+			}
+		}
+
+		&-item {
+
+			&__img {
+			}
+
+			&__description {
+			}
+		}
+
+		&-button {
+		}
+	}
+
+	.residence {
+		display: none;
+	}
+
+	.book {
+		.nav-link {
+			margin: auto;
+		}
+	}
+
+	.footer {
+		.logo-link__black {
+			margin: auto;
+		}
+		&-img {
+			&__item {
+				width: 158px;
+				height: 158px;
+			}
+		}
+	}
+
+	.swiper-route {
+		display: none;
+	}
+
+}

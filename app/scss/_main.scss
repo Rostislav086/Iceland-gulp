@@ -82,6 +82,9 @@
 }
 
 .route {
+	.route-media {
+		display: none;
+	}
 
 	&-wrapper {
 	}
@@ -405,7 +408,7 @@
 		margin: auto;
 		max-width: 1400px;
 		width: 99%;
-		background: url("../img/book_bcg.png");
+		background: linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/book_bcg.png");
 	}
 
 	&-container {
@@ -413,7 +416,14 @@
 	}
 
 	&-title {
-		color: #FFFFFF;
+		margin: 30px 0px 0px 0px;
+		font-family: 'BebasNeue';
+		font-style: normal;
+		font-size: 34px;
+		line-height: 34px;
+		text-align: center;
+		letter-spacing: 0.12em;
+		color: #ffffff;
 	}
 
 	&-content {
@@ -421,18 +431,22 @@
 	}
 
 	&-form {
-		display: block;
 		max-width: 540px;
 		width: 99%;
+		&__block {
+			display: flex;
+			justify-content: center;
+		}
+	
 
 		&__subtitle {
 			max-width: 542px;
 			width: 99%;
-			margin: 190px 0px 50px 0px;
+			margin: 90px 0px 50px 0px;
 			font-family: 'Source Serif Pro';
 			font-style: normal;
-			font-weight: normal;
-			font-size: 22px;
+			font-weight: 100;
+			font-size: 20px;
 			line-height: 30px;
 			/* or 136% */
 			text-align: center;
@@ -471,6 +485,20 @@
 			letter-spacing: 0.18em;
 			text-transform: uppercase;
 			color: #FFFFFF;
+		}
+		&__agree {
+			margin: 50px 0px 0px 0px;
+			font-family: 'Source Serif Pro';
+			font-style: normal;
+			font-weight: normal;
+			font-size: 16px;
+			line-height: 20px;
+			/* identical to box height */
+			color: #FEFEFE;
+		}
+		.person {
+			text-decoration-line: underline;
+			color: #1148C0;
 		}
 	}
 }
